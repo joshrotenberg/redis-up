@@ -66,9 +66,8 @@ async fn start_sentinel(args: SentinelStartArgs, verbose: bool) -> Result<()> {
         }
 
         let container_id = master
-            .start_and_wait()
-            .await
-            .context(format!("Failed to start Redis master {}", i + 1))?;
+            .start()
+            .await?;
 
         container_ids.push(container_id);
         ports_used.push(master_port);
