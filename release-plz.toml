@@ -1,0 +1,14 @@
+[workspace]
+# Changelog configuration
+changelog_update = true
+changelog_path = "CHANGELOG.md"
+
+# Git configuration
+git_tag_enable = true
+git_release_enable = true
+
+# PR configuration
+pr_labels = ["release"]
+
+[[package]]
+name = "redis-up"
